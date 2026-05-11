@@ -12,6 +12,7 @@ class UserModel {
   final String role;         // 'student' or 'landlord'
   final String profileImage; // URL of profile photo stored in Firebase Storage
   final DateTime createdAt;  // When the account was created
+  
 
   // ── Student-only fields ──
   final String university;          // University the student attends
