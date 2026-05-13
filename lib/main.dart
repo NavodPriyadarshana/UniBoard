@@ -165,7 +165,6 @@ class _SplashScreenState extends State<SplashScreen>
         ),
         child: Stack(
           children: [
-
             // ── Centered Logo ──
             Center(
               child: FadeTransition(
