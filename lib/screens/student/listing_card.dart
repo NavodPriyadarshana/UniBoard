@@ -304,3 +304,4 @@ class _VerifiedBadge extends StatelessWidget {
     );
   }
 }
+
