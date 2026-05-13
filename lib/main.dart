@@ -58,6 +58,7 @@ class SplashScreen extends StatefulWidget {
 
 class _SplashScreenState extends State<SplashScreen>
     with TickerProviderStateMixin {
+
   late AnimationController _fadeController;
   late AnimationController _scaleController;
   late AnimationController _badgeFadeController;
@@ -245,6 +246,7 @@ class _SplashScreenState extends State<SplashScreen>
                 ),
               ),
             ),
+
           ],
         ),
       ),
@@ -266,6 +268,7 @@ class _LoadingDots extends StatefulWidget {
 
 class _LoadingDotsState extends State<_LoadingDots>
     with TickerProviderStateMixin {
+
   late List<AnimationController> _controllers;
   late List<Animation<double>> _animations;
 
