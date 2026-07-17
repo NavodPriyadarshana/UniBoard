@@ -102,7 +102,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen>
                           style: TextStyle(
                             fontFamily: 'AgencyFB',
                             fontSize: 38,
-                            fontWeight: FontWeight.w900,
+                            fontWeight: FontWeight.w800,
                             color: const Color(0xFF2B658B),
                             height: 1.2,
                           ),
@@ -112,7 +112,7 @@ class _RoleSelectionScreenState extends State<RoleSelectionScreen>
                           style: TextStyle(
                             fontFamily: 'AgencyFB',
                             fontSize: 38,
-                            fontWeight: FontWeight.w900,
+                            fontWeight: FontWeight.w800,
                             color: const Color(0xFFF09418),
                             height: 1.2,
                           ),
