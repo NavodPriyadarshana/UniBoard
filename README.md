@@ -186,7 +186,7 @@ firebase deploy --only functions
 **Supervisor:** Ms. Vindya Kalapuge
 **Institution:** SLTC Research University — Faculty of Computing & IT
 **Programme:** Bachelor of Applied Information Technology (BAIT) — Batch 01
-**Module:** CIT310 — Software Engineering Project
+**Module:** CIT310 — Information Technology Project
 
 ---
 
