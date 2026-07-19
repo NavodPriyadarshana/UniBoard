@@ -1,7 +1,7 @@
 <div align="center">
 
 # UniBoard
-### Smart Student Boarding Finder for Sri Lanka
+### A Mobile- Based Student Boarding Finder Application for Sri Lankan University Students
 
 [![Flutter](https://img.shields.io/badge/Flutter-3.x-02569B?style=for-the-badge&logo=flutter)](https://flutter.dev)
 [![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com)
