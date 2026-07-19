@@ -125,7 +125,7 @@ class _DocumentSubmissionScreenState
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20)),
             title: Text(
-              'Documents Submitted! 📄',
+              'Documents Submitted! ',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w700,
                   color: const Color(0xFF1A1A2E)),
@@ -169,7 +169,7 @@ class _DocumentSubmissionScreenState
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20)),
             title: Text(
-              'Documents Submitted! 📄',
+              'Documents Submitted! ',
               style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w700,
                   color: const Color(0xFF1A1A2E)),
@@ -415,23 +415,6 @@ class _DocumentSubmissionScreenState
         ),
         child: Row(
           children: [
-            Container(
-              width: 44, height: 44,
-              decoration: BoxDecoration(
-                color: isUploaded
-                    ? const Color(0xFFEAF3DE)
-                    : const Color(0xFFFFF8EC),
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Icon(
-                isUploaded ? Icons.check_circle_rounded : icon,
-                color: isUploaded
-                    ? const Color(0xFF3B6D11)
-                    : const Color(0xFFF09418),
-                size: 22,
-              ),
-            ),
-            const SizedBox(width: 14),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
