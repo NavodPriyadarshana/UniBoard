@@ -26,14 +26,13 @@ class BookingRequestScreen extends StatefulWidget {
 class _BookingRequestScreenState
     extends State<BookingRequestScreen> {
 
-  final TextEditingController _messageController =
-      TextEditingController();
+
   final AuthService _authService = AuthService();
   bool _isLoading = false;
 
   @override
   void dispose() {
-    _messageController.dispose();
+
     super.dispose();
   }
 
@@ -79,7 +78,7 @@ class _BookingRequestScreenState
       if (landlordId.isNotEmpty) {
         await NotificationService.sendNotificationToUser(
           userId: landlordId,
-          title: 'New Booking Request! 📋',
+          title: 'New Booking Request! ',
           body:
               'A student has requested to book your listing: ${widget.listing['title'] ?? 'your listing'}.',
         );
@@ -93,7 +92,7 @@ class _BookingRequestScreenState
             shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(20)),
             title: Text(
-              'Request Sent! 🎉',
+              'Request Sent! ',
               style: GoogleFonts.poppins(
                 fontWeight: FontWeight.w700,
                 color: const Color(0xFF1A1A2E),
@@ -168,7 +167,7 @@ class _BookingRequestScreenState
                       const SizedBox(height: 16),
                       _buildBookingDetails(price),
                       const SizedBox(height: 16),
-                      _buildMessageBox(),
+
                       const SizedBox(height: 16),
                       _buildVisitWarning(),
                       const SizedBox(height: 16),
@@ -388,46 +387,6 @@ class _BookingRequestScreenState
     );
   }
 
-  Widget _buildMessageBox() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 24),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text('Message to Landlord',
-              style: GoogleFonts.poppins(
-                  fontSize: 15, fontWeight: FontWeight.w700,
-                  color: const Color(0xFF1A1A2E))),
-          const SizedBox(height: 10),
-          TextField(
-            controller: _messageController,
-            maxLines: 4,
-            style: GoogleFonts.poppins(
-                fontSize: 14, color: const Color(0xFF1A1A2E)),
-            decoration: InputDecoration(
-              hintText:
-                  'Hi, I am interested in this room. I am a student at...',
-              hintStyle: GoogleFonts.poppins(
-                  fontSize: 13, color: Colors.grey.shade400),
-              filled: true,
-              fillColor: Colors.white,
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(14),
-                borderSide:
-                    const BorderSide(color: Color(0xFFDDE3F0)),
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(14),
-                borderSide: const BorderSide(
-                    color: Color(0xFF2B658B), width: 1.5),
-              ),
-              contentPadding: const EdgeInsets.all(16),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
 
   Widget _buildVisitWarning() {
     return Padding(
