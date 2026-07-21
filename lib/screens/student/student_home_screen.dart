@@ -326,7 +326,7 @@ class _StudentHomeScreenState extends State<StudentHomeScreen> {
       'location': listing.location,
       'distance': listing.city.isNotEmpty ? listing.city : 'Sri Lanka',
       'price': listing.pricePerSlot.toInt(),
-      'rating': 4.5,
+      'rating': listing.rating ?? 0,
       'roomType': listing.roomType,
       'slotsLeft': listing.availableSlots,
       'totalCapacity': listing.totalCapacity,
