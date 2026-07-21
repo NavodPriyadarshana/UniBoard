@@ -150,8 +150,10 @@ class _ListingCardState extends State<ListingCard> {
         (widget.listing['totalCapacity'] as num? ?? 0).toInt();
     final int currentOcc =
         (widget.listing['currentOccupants'] as num? ?? 0).toInt();
+    debugPrint('🏠 availSlots: $availSlots totalCap: $totalCap currentOcc: $currentOcc');
     final bool isFullyBooked = availSlots <= 0 ||
         (totalCap > 0 && currentOcc >= totalCap);
+    debugPrint('🏠 isFullyBooked: $isFullyBooked');
 
     return ClipRRect(
       borderRadius: const BorderRadius.vertical(top: Radius.circular(18)),

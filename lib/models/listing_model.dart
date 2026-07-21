@@ -22,6 +22,8 @@ class ListingModel {
   final bool isVerified;
   final bool membershipActive;
   final DateTime createdAt;
+  final double rating;
+  final int reviewCount;
 
   ListingModel({
     required this.listingId,
@@ -45,6 +47,8 @@ class ListingModel {
     this.isVerified = false,
     this.membershipActive = false,
     required this.createdAt,
+    this.rating = 0.0,
+    this.reviewCount = 0,
   });
 
   factory ListingModel.fromFirestore(DocumentSnapshot doc) {
@@ -71,6 +75,8 @@ class ListingModel {
       isVerified: data['isVerified'] ?? false,
       membershipActive: data['membershipActive'] ?? false,
       createdAt: (data['createdAt'] as Timestamp?)?.toDate() ?? DateTime.now(),
+      rating: (data['rating'] as num? ?? 0.0).toDouble(),
+      reviewCount: data['reviewCount'] as int? ?? 0,
     );
   }
 
